@@ -1,0 +1,223 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Registered Traveller</title>
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 8]><link href="govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/form.storage.js"></script>
+	<script type="text/javascript" src="scripts/application.js"></script>
+	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+	<script>
+	$(document).ready(function(){
+		$(".hideOtherNames").click(function(){
+				$("#otherNamesWrapper").hide();
+		});
+		$(".showOtherNames").click(function(){
+				$("#otherNamesWrapper").show();
+		});
+});
+</script>
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content">
+
+<!-- DELETE FROM HERE -->
+<br>
+<header class="page-header-sub">
+	<span class="section-number">Section 5 of 7</span>
+</header>
+<br>
+
+<div class="form-group">
+	<fieldset class="form-group name-group">
+			<legend class="form-label-bold" data-label="Full name">What is your full name as it appears on your passport?</legend>
+				<div class="form-group" data-group-name="surname">
+					<label class="form-label label" for="surname"  data-label="Surname">
+							Surname</label>
+					<input autocomplete="off" class="form-control" id="surname" type="text" name="surname" data-show="false" aria-required="true" value="">
+				</div>
+				<div class="form-group " data-group-name="givenName">
+					<label class="form-label label" for="givenName"  data-label="Given names">
+							Given names</label>
+					<span class="form-hint">Include any middle names</span>
+					<input autocomplete="off" class="form-control" id="givenName" type="text" name="givenName" data-show="false" aria-required="true" value="">
+				</div>
+	</fieldset>
+
+	<div class="form-group " data-group-name="otherNames">
+		 <fieldset class="inline" id="otherNames">
+			 <label class="form-label-bold label" data-label="Other name">
+					 Have you ever been officially or legally known by another name?</label>
+			 <div class="radio-wrapper">
+					 <input type="radio" id="otherNamesYes" name="otherNames" value="Yes" autocomplete="off"
+									aria-controls="otherNamesFields"
+									aria-expanded="false"
+									aria-required="true"
+									data-summary="You don’t have other names"
+									class="showOtherNames"
+									>
+					 <label class="block-label" data-target="otherNamesFields" for="otherNamesYes">Yes</label>
+			 </div>
+				 <div class="radio-wrapper">
+						 <input type="radio" id="otherNamesNo" name="otherNames" value="No" autocomplete="off" aria-required="true"
+										>
+						 <label class="block-label" for="otherNamesNo">No</label>
+				 </div>
+		 </fieldset>
+	</div>
+
+	<div class="form-group js-hidden" id="otherNamesWrapper" aria-hidden="false" data-group-name="aliases"  style="display: none">
+			<div class="panel-indent alias-panel">
+					<span class="form-label-bold label">Your other name</span>
+
+							<fieldset data-group-name="otherName_0" class="name-group" data-field-type="dynamic" data-dynamic-id="0">
+									<label class="form-label-bold visuallyhidden" data-label="Other names">
+
+											Your other name</label>
+									<div class="form-group" data-group-name="otherSurname_0">
+											<label class="form-label label" for="otherSurname_0" data-label="Other sname">Other surname</label>
+											<input autocomplete="off"  class="form-control" id="otherSurname_0" type="text" name="otherSurname_0" data-name="otherSurname" data-show="false" aria-required="true"  value="">
+									</div>
+									<div class="form-group" data-group-name="otherGivenName_0">
+											<label class="form-label label" for="otherGivenName_0" data-label="Other gname">Other given names</label>
+											<span class="form-hint">Include any middle names</span>
+											<input autocomplete="off" class="form-control" id="otherGivenName_0" type="text" name="otherGivenName_0" data-name="otherGivenName" data-show="false" aria-required="true" value="">
+									</div>
+							</fieldset>
+
+							<fieldset data-group-name="otherName_1" class="form-group name-group" data-field-type="dynamic" data-dynamic-id="1"  style="display: none">
+									<legend class="form-label-bold visuallyhidden" data-label="Other names">Your other name</legend>
+									<div class="form-group" data-group-name="otherSurname_1">
+											<label class="form-label label" for="otherSurname_1" data-label="Other sname">Other surname</label>
+											<input autocomplete="off" class="form-control" id="otherSurname_1" type="text" name="otherSurname_1" data-name="otherSurname" data-show="false" aria-required="true" value="">
+									</div>
+									<div class="form-group" data-group-name="otherGivenName_1">
+											<label class="form-label label" for="otherGivenName_1" data-label="Other gname">Other given names</label>
+											<span class="form-hint">Include any middle names</span>
+											<input autocomplete="off" class="form-control" id="otherGivenName_1" type="text" name="otherGivenName_1" data-name="otherGivenName" data-show="false" aria-required="true" value="">
+									</div>
+							</fieldset>
+
+							<fieldset data-group-name="otherName_2" class="form-group name-group" data-field-type="dynamic" data-dynamic-id="2" style="display: none">
+									<legend class="form-label-bold visuallyhidden" data-label="Other names">Your other name</legend>
+									<div class="form-group" data-group-name="otherSurname_2">
+											<label class="form-label label" for="otherSurname_2" data-label="Other sname">Other surname</label>
+											<input autocomplete="off" class="form-control" id="otherSurname_2" type="text" name="otherSurname_2" data-name="otherSurname" data-show="false" aria-required="true" value="">
+									</div>
+									<div class="form-group" data-group-name="otherGivenName_2">
+											<label class="form-label label" for="otherGivenName_2" data-label="Other gname">Other given names</label>
+											<span class="form-hint">Include any middle names</span>
+											<input autocomplete="off" class="form-control" id="otherGivenName_2" type="text" name="otherGivenName_2" data-name="otherGivenName" data-show="false" aria-required="true" value="">
+									</div>
+							</fieldset>
+
+							<fieldset data-group-name="otherName_3" class="form-group name-group" data-field-type="dynamic" data-dynamic-id="3" style="display: none">
+									<legend class="form-label-bold visuallyhidden" data-label="Other names">Your other name</legend>
+									<div class="form-group" data-group-name="otherSurname_3">
+											<label class="form-label label" for="otherSurname_3" data-label="Other sname">Other surname</label>
+											<input autocomplete="off" class="form-control" id="otherSurname_3" type="text" name="otherSurname_3" data-name="otherSurname" data-show="false" aria-required="true" value="">
+									</div>
+									<div class="form-group" data-group-name="otherGivenName_3">
+											<label class="form-label label" for="otherGivenName_3" data-label="Other gname">Other given names</label>
+											<span class="form-hint">Include any middle names</span>
+											<input autocomplete="off" class="form-control" id="otherGivenName_3" type="text" name="otherGivenName_3" data-name="otherGivenName" data-show="false" aria-required="true" value="">
+									</div>
+							</fieldset>
+
+							<fieldset data-group-name="otherName_4" class="form-group name-group" data-field-type="dynamic" data-dynamic-id="4" style="display: none">
+									<legend class="form-label-bold visuallyhidden" data-label="Other names">Your other name</legend>
+									<div class="form-group" data-group-name="otherSurname_4">
+											<label class="form-label label" for="otherSurname_4" data-label="Other sname">Other surname</label>
+											<input autocomplete="off" class="form-control" id="otherSurname_4" type="text" name="otherSurname_4" data-name="otherSurname" data-show="false" aria-required="true" value="">
+									</div>
+									<div class="form-group" data-group-name="otherGivenName_4">
+											<label class="form-label label" for="otherGivenName_4" data-label="Other gname">Other given names</label>
+											<span class="form-hint">Include any middle names</span>
+											<input autocomplete="off" class="form-control" id="otherGivenName_4" type="text" name="otherGivenName_4" data-name="otherGivenName" data-show="false" aria-required="true" value="">
+									</div>
+							</fieldset>
+
+							<fieldset data-group-name="otherName_5" class="form-group name-group" data-field-type="dynamic" data-dynamic-id="5" style="display: none">
+									<legend class="form-label-bold visuallyhidden" data-label="Other names">Your other name</legend>
+									<div class="form-group" data-group-name="otherSurname_5">
+											<label class="form-label label" for="otherSurname_5" data-label="Other sname">Other surname</label>
+											<input autocomplete="off" class="form-control" id="otherSurname_5" type="text" name="otherSurname_5" data-name="otherSurname" data-show="false" aria-required="true" value="">
+									</div>
+									<div class="form-group" data-group-name="otherGivenName_5">
+											<label class="form-label label" for="otherGivenName_5" data-label="Other gname">Other given names</label>
+											<span class="form-hint">Include any middle names</span>
+											<input autocomplete="off" class="form-control" id="otherGivenName_5" type="text" name="otherGivenName_5" data-name="otherGivenName" data-show="false" aria-required="true" value="">
+									</div>
+							</fieldset>
+
+							<fieldset data-group-name="otherName_6" class="form-group name-group" data-field-type="dynamic" data-dynamic-id="6" style="display: none">
+									<legend class="form-label-bold visuallyhidden" data-label="Other names">Your other name</legend>
+									<div class="form-group" data-group-name="otherSurname_6">
+											<label class="form-label label" for="otherSurname_6" data-label="Other sname">Other surname</label>
+											<input autocomplete="off" class="form-control" id="otherSurname_6" type="text" name="otherSurname_6" data-name="otherSurname" data-show="false" aria-required="true" value="">
+									</div>
+									<div class="form-group" data-group-name="otherGivenName_6">
+											<label class="form-label label" for="otherGivenName_6" data-label="Other gname">Other given names</label>
+											<span class="form-hint">Include any middle names</span>
+											<input autocomplete="off" class="form-control" id="otherGivenName_6" type="text" name="otherGivenName_6" data-name="otherGivenName" data-show="false" aria-required="true" value="">
+									</div>
+							</fieldset>
+
+							<fieldset data-group-name="otherName_7" class="form-group name-group" data-field-type="dynamic" data-dynamic-id="7" style="display: none">
+									<legend class="form-label-bold visuallyhidden" data-label="Other names">Your other name</legend>
+									<div class="form-group" data-group-name="otherSurname_7">
+											<label class="form-label label" for="otherSurname_7" data-label="Other sname">Other surname</label>
+											<input autocomplete="off" class="form-control" id="otherSurname_7" type="text" name="otherSurname_7" data-name="otherSurname" data-show="false" aria-required="true" value="">
+									</div>
+									<div class="form-group" data-group-name="otherGivenName_7">
+											<label class="form-label label" for="otherGivenName_7" data-label="Other gname">Other given names</label>
+											<span class="form-hint">Include any middle names</span>
+											<input autocomplete="off" class="form-control" id="otherGivenName_7" type="text" name="otherGivenName_7" data-name="otherGivenName" data-show="false" aria-required="true" value="">
+									</div>
+							</fieldset>
+
+							<fieldset data-group-name="otherName_8" class="form-group name-group" data-field-type="dynamic" data-dynamic-id="8" style="display: none">
+									<legend class="form-label-bold visuallyhidden" data-label="Other names">Your other name</legend>
+									<div class="form-group" data-group-name="otherSurname_8">
+											<label class="form-label label" for="otherSurname_8" data-label="Other sname">Other surname</label>
+											<input autocomplete="off" class="form-control" id="otherSurname_8" type="text" name="otherSurname_8" data-name="otherSurname" data-show="false" aria-required="true" value="">
+									</div>
+									<div class="form-group" data-group-name="otherGivenName_8">
+											<label class="form-label label" for="otherGivenName_8" data-label="Other gname">Other given names</label>
+											<span class="form-hint">Include any middle names</span>
+											<input autocomplete="off" class="form-control" id="otherGivenName_8" type="text" name="otherGivenName_8" data-name="otherGivenName" data-show="false" aria-required="true" value="">
+									</div>
+							</fieldset>
+
+							<a href="#" class="add-dynamic-field hide">Add another name</a>
+
+					</div>
+			</div>
+	</div>
+
+
+	<div class="form-group">
+		<a class="button" href="names.html" id="continuebutton">Continue</a>
+	</div>
+
+<!-- STOP DELETING! -->
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>

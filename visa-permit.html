@@ -1,0 +1,143 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Registered Traveller</title>
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 8]><link href="govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/form.storage.js"></script>
+	<script type="text/javascript" src="scripts/application.js"></script>
+	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+	<script>
+	$(document).ready(function(){
+    $("#validVisaOrResidentsPermit_false").click(function(){
+        $("#VisaPermitsWrapper").hide();
+				$("#block_hasVisa_No").show();
+    });
+		$("#validVisaOrResidentsPermit_true").click(function(){
+        $("#VisaPermitsWrapper").show();
+				$("#block_hasVisa_No").hide();
+    });
+		$("#visasAndPermits").change(function(){
+			$("#VisaCategoriesWrapper").hide();
+			if ($(this).val()==='none') {
+        $("#VisaCategoriesWrapper").show();
+			}
+    });
+		$("#visasCategories").change(function(){
+			$("#otherCategoriesWrapper").hide();
+			if ($(this).val()==='none') {
+        $("#otherCategoriesWrapper").show();
+			}
+    });
+		$("#reasonForTravel").change(function(){
+			$("#travelledEnoughWrapper").hide();
+			if (['BV', 'GV', 'VPC', 'AV', 'ESV', 'VPC', 'MV', 'IT'].indexOf($(this).val()) > -1) {
+				$("#travelledEnoughWrapper").show();
+			}
+		});
+});
+</script>
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content">
+
+<!-- DELETE FROM HERE -->
+
+<br> <!--<header class="page-header-sub">
+	<span class="section-number">Section 2 of 7</span>
+</header>-->
+<br>
+
+<div class="form-group">
+		<div class="form-group" data-group-name="passportNationality">
+			<fieldset class="inline" id="passportNationality">
+				<label class="form-label-bold label" for="passportNationality" data-label="Nationality">Do you have a valid UK visa or residence permit?</label>
+
+				<div class="radio-wrapper">
+					<input type="radio" id="validVisaOrResidentsPermit_true" name="validVisaOrResidentsPermit" value="Yes" tabindex="1" class="showVisaPermits">
+					<label class="block-label" for="validVisaOrResidentsPermit_true">Yes</label>
+				</div>
+				<div class="radio-wrapper">
+					<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" autocomplete="off" class="hideVisaPermits" data-button-page="check-answers-no.html" data-button-id="#continuebutton">
+		      <label class="block-label" for="validVisaOrResidentsPermit_false">No</label>
+				</div>
+				<br>
+
+			</fieldset>
+		</div>
+</div>
+
+<!-- visasAndPermits -->
+<div id="VisaPermitsWrapper" style="display: none">
+		<div class="form-group " data-group-name="visasAndPermits">
+				<fieldset class="inline">
+						<label for="visasAndPermits" class="form-label-bold label"  data-label="Visa or Permit">
+								Which of the following UK visa or residence permits do you have?</label>
+						<!-- TODO set the right values from the server -->
+						<select id="visasAndPermits" name="visasAndPermits" aria-required="true" class="form-select form-control" autocomplete="off">
+								<option disabled selected></option>
+								<option  value="TRS">Tiers 1, 2 or 4</option>
+								<option  value="TR5">Tier 5 (excluding Creative/Sporting concession)</option>
+								<option  value="R">Indefinite Leave to Remain</option>
+								<option  value="PMR">Naturalisation</option>
+								<option  value="UKA">UK Ancestry</option>
+								<option  value="EEA">EEA Family Permit</option>
+								<option  value="DSP">Family member or spouse/partner</option>
+								<option  value="none">I don’t have any of these</option>
+						</select>
+				</fieldset>
+		</div>
+		<!-- visasCategories -->
+		<!-- TODO set the right values from the server -->
+
+		<div class="form-group " data-group-name="visasCategories"  id="VisaCategoriesWrapper" style="display: none">
+				<fieldset class="inline">
+						<label for="visasCategories" class="form-label-bold label"  data-label="Visa or Permit">
+								Do you have any of the following UK visa or residence permits?</label>
+						<select id="visasCategories" name="visasCategories" aria-required="true" class="form-select form-control" autocomplete="off">
+								<option value=""></option>
+								<option  value="T5">Tier 5 (Creative/Sporting concession)</option>
+								<option  value="Disc">Discretionary Leave</option>
+								<option  value="HP">Humanitarian Protection</option>
+								<option  value="LOTR">Leave Outside the Rules</option>
+								<option  value="none">I don’t have any of these</option>
+						</select>
+				</fieldset>
+		</div>
+		<!-- otherCategories -->
+		<div class="form-group " data-group-name="otherCategories" id="otherCategoriesWrapper" style="display: none">
+				<fieldset class="inline">
+						<legend class="visuallyhidden">
+								Other categories of visa</legend>
+						<div class="form-group">
+								<label class="form-label-bold label" for="otherCategories" data-label="Other categories">Which UK visa, residence permit or leave do you currently hold?</label>
+								<input type="text" autocomplete="off" class="form-control" id="otherCategories" name="otherCategories" aria-required="true" value="">
+						</div>
+				</fieldset>
+		</div>
+</div>
+	<div class="form-group">
+		<a class="button" href="#" id="continuebutton">Continue</a>
+	</div>
+
+<!-- STOP DELETING! -->
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>
