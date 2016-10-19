@@ -8,6 +8,7 @@
 	<meta charset="utf-8">
 	<title>Registered Traveller</title>
 	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
 	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
 	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
@@ -20,24 +21,6 @@
 	<script type="text/javascript" src="scripts/application.js"></script>
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-    $("#validVisaOrResidentsPermit_false").click(function(){
-        $("#VisaPermitsWrapper").hide();
-				$("#block_hasVisa_No").show();
-    });
-		$("#validVisaOrResidentsPermit_true").click(function(){
-        $("#VisaPermitsWrapper").show();
-				$("#block_hasVisa_No").hide();
-    });
-		$("#visasAndPermits").change(function(){
-			$("#VisaCategoriesWrapper").hide();
-			if ($(this).val()==='none') {
-        $("#VisaCategoriesWrapper").show();
-			}
-    });
-});
-</script>
 </head>
 <body>
 
@@ -46,53 +29,17 @@
 
 <!-- DELETE FROM HERE -->
 
-<!-- <br> <header class="page-header-sub">
-	<span class="section-number">Section 1 of 7</span>
-</header>
-<br> -->
+<br>
+<div class="form-group" data-group-name="passportNationality">
+	<fieldset class="inline" id="passportNationality">
+		<p class="form-label-bold label" data-label="Nationality">Registered Traveller renewals and updates prototypes</p><br>
+		<p><a href="index-renewal.html">Renewals protoype</a><br><br>
+		<a href="index-update.html">Updates prototype</a> [in progress]</p>
 
-<div class="form-group">
-<h1 class="heading-large">Renew and update</h1>
-		<fieldset class="inline">
-				<div class="form-group " data-group-name="passportNumber">
-						<label class="form-label-bold label" for="passportNumber" data-label="Passport number">
-								Registered Traveller number</label>
-						<input autocomplete="off" type="text" class="form-control" id="passportNumber"
-									 name="passportNumber" aria-required="true" value=""
-									 ondragstart=”return false” onselectstart=”return false” onpaste="return false">
-				</div>
-		</fieldset>
+		<br>
 
-
-<div class="date-group" data-group-name="passportExpiry">
-		<fieldset>
-				<label class="form-label-bold date-field label" for="passportExpiry" data-label="Passport expiry date">
-						Date of birth <span class="visuallyhidden">expected format is DD/MM/YYY</span></label>
-				<div class="form-date" id="passportExpiry">
-						<p class="form-hint">For example, 02 03 1979</p>
-						<div class="form-group form-group-day">
-								<label for="exp-day"><span class="visuallyhidden">New passport expiry date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
-								<input autocomplete="off" type="text" class="form-control" id="exp-day" name="expiryDate_day"
-											 aria-required="true" value="" maxlength="2">
-						</div>
-						<div class="form-group form-group-month">
-								<label for="exp-month"><span class="visuallyhidden">New passport expiry date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
-								<input autocomplete="off" type="text" class="form-control" id="exp-month" name="expiryDate_month"
-											 aria-required="true" value="" maxlength="2">
-						</div>
-						<div class="form-group form-group-year">
-								<label for="exp-year"><span class="visuallyhidden">New passport expiry date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
-								<input autocomplete="off" type="text" class="form-control" id="exp-year" name="expiryDate_year"
-											 aria-required="true" value="" maxlength="4">
-						</div>
-				</div>
-		</fieldset>
+	</fieldset>
 </div>
-</div>
-
-	<div class="form-group">
-		<a class="button" href="renew.html" id="continuebutton">Continue</a>
-	</div>
 
 <!-- STOP DELETING! -->
 

@@ -23,11 +23,11 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
 	<script>
 	$(document).ready(function(){
-		$(".hideNewEmail").click(function(){
-				$("#newEmail").hide();
+		$(".hideOther").click(function(){
+				$("#other").hide();
 		});
-		$(".showNewEmail").click(function(){
-				$("#newEmail").show();
+		$(".showOther").click(function(){
+				$("#other").show();
 		});
 	});
 	</script>
@@ -45,28 +45,74 @@
 <br>
 
 <div class="form-group">
-	<fieldset class="inline" id="validVisaOrResidentsPermit">
-		<label class="form-label-bold label" for="passportNationality" data-label="">Has your email address changed?</label>
-		<p class="form-hint panel-indent">Your current email is nick.cowan@hotmail.com</p>
+	<label class="form-label-bold label" for="passportNationality" data-label="">Which of the following UK visa or residence permits do you have?</label>
+
+	<fieldset id="visasAndPermits-group" class="radios-stacked" role="radiogroup" aria-required="true">
+
 		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_true" name="validVisaOrResidentsPermit" value="Yes" tabindex="1" data-button-page="summary.html" data-button-id="#continuebutton" value="Yes" class="showNewEmail">
-			<label class="block-label" for="validVisaOrResidentsPermit_true">Yes</label>
+			<input
+			class="hideOther"
+			type="radio"
+			id="visasAndPermits-TRS"
+			name="visasAndPermits"
+			value="TRS"
+			data-button-page="ineligible-categories.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-TRS">Tier 5 Creative/Sporting concession</label>
 		</div>
 		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="summary.html" data-button-id="#continuebutton" value="Yes" class="hideNewEmail">
-      <label class="block-label" for="validVisaOrResidentsPermit_false">No</label>
+			<input
+			class="hideOther"
+			type="radio"
+			id="visasAndPermits-TR5"
+			name="visasAndPermits"
+			value="TR5"
+			data-button-page="ineligible-categories.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-TR5">Discretionary Leave</label>
 		</div>
-		<br>
+		<div class="radio-wrapper">
+			<input
+			class="hideOther"
+			type="radio"
+			id="visasAndPermits-R"
+			name="visasAndPermits"
+			value="R"
+			data-button-page="ineligible-categories.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-R">Humanitarian Protection</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			class="hideOther"
+			type="radio"
+			id="visasAndPermits-PMR"
+			name="visasAndPermits"
+			value="PMR"
+			data-button-page="ineligible-categories.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-PMR">Leave Outside the Rules</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			class="showOther"
+			type="radio"
+			id="visasAndPermits-none"
+			name="visasAndPermits"
+			value="none"
+			data-button-page="email-changed.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-none">I don’t have any of these</label>
+		</div>
 	</fieldset>
 </div>
 
-<fieldset class="inline panel-indent" id="newEmail" style="display: none">
+<fieldset class="inline panel-indent" id="other" style="display: none">
 <div class="form-group">
-	<label class="bold-small label" for="passportNumber" data-label="">What is your new email address?</label>
+	<label class="bold-small label" for="passportNumber" data-label="">Other category</label>
 	<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
 </div>
 </fieldset>
-
 
 	<div class="form-group">
 		<a class="button" href="" id="continuebutton">Continue</a>

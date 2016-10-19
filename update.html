@@ -23,14 +23,35 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
 	<script>
 	$(document).ready(function(){
-		$(".hideNewEmail").click(function(){
-				$("#newEmail").hide();
+    $("#validVisaOrResidentsPermit_false").click(function(){
+        $("#VisaPermitsWrapper").hide();
+				$("#block_hasVisa_No").show();
+    });
+		$("#validVisaOrResidentsPermit_true").click(function(){
+        $("#VisaPermitsWrapper").show();
+				$("#block_hasVisa_No").hide();
+    });
+		$("#visasAndPermits").change(function(){
+			$("#VisaCategoriesWrapper").hide();
+			if ($(this).val()==='none') {
+        $("#VisaCategoriesWrapper").show();
+			}
+    });
+		$("#visasCategories").change(function(){
+			$("#otherCategoriesWrapper").hide();
+			if ($(this).val()==='none') {
+        $("#otherCategoriesWrapper").show();
+			}
+    });
+
+		$("#reasonForTravel").change(function(){
+			$("#travelledEnoughWrapper").hide();
+			if (['BV', 'GV', 'VPC', 'AV', 'ESV', 'VPC', 'MV', 'IT'].indexOf($(this).val()) > -1) {
+				$("#travelledEnoughWrapper").show();
+			}
 		});
-		$(".showNewEmail").click(function(){
-				$("#newEmail").show();
-		});
-	});
-	</script>
+});
+</script>
 </head>
 <body>
 
@@ -38,39 +59,27 @@
 	<main id="content">
 
 <!-- DELETE FROM HERE -->
-<br>
-<header class="page-header-sub">
-	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
-</header>
-<br>
 
-<div class="form-group">
-	<fieldset class="inline" id="validVisaOrResidentsPermit">
-		<label class="form-label-bold label" for="passportNationality" data-label="">Has your email address changed?</label>
-		<p class="form-hint panel-indent">Your current email is nick.cowan@hotmail.com</p>
-		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_true" name="validVisaOrResidentsPermit" value="Yes" tabindex="1" data-button-page="summary.html" data-button-id="#continuebutton" value="Yes" class="showNewEmail">
-			<label class="block-label" for="validVisaOrResidentsPermit_true">Yes</label>
-		</div>
-		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="summary.html" data-button-id="#continuebutton" value="Yes" class="hideNewEmail">
-      <label class="block-label" for="validVisaOrResidentsPermit_false">No</label>
-		</div>
-		<br>
-	</fieldset>
+<div class="form-group" data-group-name="passportNationality">
+
+<h1 class="heading-large">Your membership lasts until 5 December 2016</h1>
+
+<p>We will email you 28 days before your membership expires with instructions on how to renew.</p>
+
 </div>
+		<div class="form-group" data-group-name="passportNationality">
+			<fieldset class="inline" id="passportNationality">
+				<label class="form-label-bold label" for="passportNationality" data-label="Nationality">Your details</label>
 
-<fieldset class="inline panel-indent" id="newEmail" style="display: none">
-<div class="form-group">
-	<label class="bold-small label" for="passportNumber" data-label="">What is your new email address?</label>
-	<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
+			<ul class="nojs" id="summary">
+
+				<li class="clearfix"><a href="#">Update  &ndash; &pound;20</a><h2>Passport number</h2><p class="summary-data">*****3123</p></li>
+
+				<li class="clearfix"><a href="#" class="">Update</a><h2>Visa</h2><p class="summary-data">Tier 2 (general)</p></li>
+
+				<li class="clearfix"><a href="#" class="">Update</a><h2>Email</h2><p class="summary-data">nick.cowan@hotmail.com</p></li>
+		</ul>
 </div>
-</fieldset>
-
-
-	<div class="form-group">
-		<a class="button" href="" id="continuebutton">Continue</a>
-	</div>
 
 <!-- STOP DELETING! -->
 

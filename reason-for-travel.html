@@ -8,6 +8,7 @@
 	<meta charset="utf-8">
 	<title>Registered Traveller</title>
 	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
 	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
 	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
@@ -20,26 +21,57 @@
 	<script type="text/javascript" src="scripts/application.js"></script>
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+
+
+	<script>
+	var makePath = function(form) {
+	  form.action = document.getElementById('reasonForTravel').value;
+	};
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("#reasonForTravel").val("blank");
+	});
+	</script>
 </head>
 <body>
 
 	<header data-includefile="header"></header>
 	<main id="content">
 
-
 <!-- DELETE FROM HERE -->
-
 <br>
-<div class="form-group" data-group-name="passportNationality">
-	<fieldset class="inline" id="passportNationality">
-		<p class="form-label-bold label" data-label="Nationality">Registered Traveller prototype</p>
-		<p><a href="start-page-live.html">Start page live</a></p>
-		<p><a href="renew.html">Renewal</a></p>
+<header class="page-header-sub">
+	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
+</header>
+<br>
 
-		<br>
+<form onsubmit='makePath(this);'>
+	<div id="reasonForTravel-group" class="form-group">
+    <label for="reasonForTravel" class="form-label-bold">
+        <span class="hide-label">What is your reason for travel to the UK?
+    </label>
 
-	</fieldset>
+    <select id="reasonForTravel" class="form-control" name="reasonForTravel" aria-required="true">
+        <option value="blank" selected></option>
+        <option value="reason-for-travel-q2.html">Business visitor</option>
+        <option value="reason-for-travel-q2.html" >General visitor</option>
+        <option value="email-changed.html" >Member of Diplomatic Mission</option>
+        <option value="reason-for-travel-q2.html" >Academic visitor</option>
+        <option value="reason-for-travel-q2.html" >Entertainment or Sports visitor</option>
+        <option value="reason-for-travel-q2.html" >In transit - passing through the UK</option>
+        <option value="reason-for-travel-q2.html" >Parents with a child in a UK school</option>
+        <option value="reason-for-travel-q2.html" >Medical visitor</option>
+        <option value="ineligible-reason.html" >Paid work - Permitted Paid Engagement</option>
+        <option value="ineligible-reason.html" >Coming to the UK for my wedding</option>
+        <option value="ineligible-reason.html" >None of the above</option>
+    </select>
 </div>
+<div class="form-group">
+	<button class="button" type="submit" id="submit">Continue</button>
+</div>
+</form>
+
 
 <!-- STOP DELETING! -->
 

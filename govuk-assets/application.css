@@ -1179,7 +1179,7 @@ label .rtl-both {
 
 @media (max-width: 641px) {
     .form-group {width: 100%}
-    .button {display: block; margin-right: 0; text-align: center}
+    .button {display: block; margin-right: 0; text-align: center; padding: 13px 0 11px 0}
 }
 
 .govuk-box-highlight {
@@ -1650,19 +1650,26 @@ h2.heading-medium.less-space {margin: 1em 0 0.5em 0}
     top: 25px;
     z-index: 2;
 }
+@media (max-width: 640px){
+  .radio-wrapper {
+      position: relative;
+      display: block;
+  }
+}
+
+@media (max-width: 640px){
+.radios-stacked .radio-wrapper input[type="radio"] {
+    top: 16px;
+}}
 .inline .block-label {
     clear: none;
     margin-right: 15px;
 }
-
-
 .js-enabled label.selected, .radio-wrapper input:checked + label, .declaration-wrapper input:checked + label {
     background: #fff;
     border-color: #0b0c0c;
 }
-#card .radio-wrapper {clear: both; display: list-item}
-
-
+.radios-stacked .radio-wrapper, #card .radio-wrapper {clear: both; display: list-item; list-style: none}
 
 .declaration-wrapper {position: relative}
 .declaration-wrapper input[type="checkbox"] {
@@ -1671,7 +1678,6 @@ h2.heading-medium.less-space {margin: 1em 0 0.5em 0}
     top: 25px;
     z-index: 2;
 }
-
 #global-header .header-proposition .proposition-name, #global-header .header-proposition .proposition-name:visited {
     font-family: "nta", Arial, sans-serif;
     font-size: 24px;
@@ -1800,4 +1806,26 @@ form .back-to-previous {
     padding-left: 0.75em;
     text-align: right;
     margin: 0 0 10px 0;
-    overflow: hidden;
+    overflow: hidden;}
+
+  .check-name-field {
+        width: 80%;
+        font-weight: 400;
+        padding: 6px ;
+    }
+    @media (max-width: 640px){
+.check-name-field {
+    width: 100%;
+    font-size: 19px;
+    font-weight: 400;
+    padding: 5px;
+}}
+.js-enabled label.selected {
+    background: #fff;
+    border-color: #0b0c0c;
+}
+select {
+    -webkit-appearance: menulist !important;
+    -moz-appearance: menulist !important;
+    appearance: menulist !important;
+}

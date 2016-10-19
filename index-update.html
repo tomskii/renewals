@@ -37,19 +37,6 @@
         $("#VisaCategoriesWrapper").show();
 			}
     });
-		$("#visasCategories").change(function(){
-			$("#otherCategoriesWrapper").hide();
-			if ($(this).val()==='none') {
-        $("#otherCategoriesWrapper").show();
-			}
-    });
-
-		$("#reasonForTravel").change(function(){
-			$("#travelledEnoughWrapper").hide();
-			if (['BV', 'GV', 'VPC', 'AV', 'ESV', 'VPC', 'MV', 'IT'].indexOf($(this).val()) > -1) {
-				$("#travelledEnoughWrapper").show();
-			}
-		});
 });
 </script>
 </head>
@@ -60,23 +47,53 @@
 
 <!-- DELETE FROM HERE -->
 
-<div class="form-group" data-group-name="passportNationality">
+<!-- <br> <header class="page-header-sub">
+	<span class="section-number">Section 1 of 7</span>
+</header>
+<br> -->
 
-<h1 class="heading-large">Your membership expires in 20 days</h1>
+<div class="form-group">
+<h1 class="heading-large">Renew and update</h1>
+		<fieldset class="inline">
+				<div class="form-group " data-group-name="passportNumber">
+						<label class="form-label-bold label" for="passportNumber" data-label="Passport number">
+								Registered Traveller number</label>
+						<input autocomplete="off" type="text" class="form-control" id="passportNumber"
+									 name="passportNumber" aria-required="true" value=""
+									 ondragstart=”return false” onselectstart=”return false” onpaste="return false">
+				</div>
+		</fieldset>
 
-<p>You need to renew your membership before 30 September 2016.</p>
 
-<p>You will need: </p>
-
-<ul class="list-bullet">
-		<li>your passport number and expiry date (if they have changed)</li>
-		<li>a debit or credit card </li>
-</ul>
-
-<a class="button" href="passport-changed.html" id="continuebutton">Renew your membership &ndash; &pound;50</a>
-
+<div class="date-group" data-group-name="passportExpiry">
+		<fieldset>
+				<label class="form-label-bold date-field label" for="passportExpiry" data-label="Passport expiry date">
+						Date of birth <span class="visuallyhidden">expected format is DD/MM/YYY</span></label>
+				<div class="form-date" id="passportExpiry">
+						<p class="form-hint">For example, 02 03 1979</p>
+						<div class="form-group form-group-day">
+								<label for="exp-day"><span class="visuallyhidden">New passport expiry date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+								<input autocomplete="off" type="text" class="form-control" id="exp-day" name="expiryDate_day"
+											 aria-required="true" value="" maxlength="2">
+						</div>
+						<div class="form-group form-group-month">
+								<label for="exp-month"><span class="visuallyhidden">New passport expiry date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+								<input autocomplete="off" type="text" class="form-control" id="exp-month" name="expiryDate_month"
+											 aria-required="true" value="" maxlength="2">
+						</div>
+						<div class="form-group form-group-year">
+								<label for="exp-year"><span class="visuallyhidden">New passport expiry date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+								<input autocomplete="off" type="text" class="form-control" id="exp-year" name="expiryDate_year"
+											 aria-required="true" value="" maxlength="4">
+						</div>
+				</div>
+		</fieldset>
+</div>
 </div>
 
+	<div class="form-group">
+		<a class="button" href="update.html" id="continuebutton">Continue</a>
+	</div>
 
 <!-- STOP DELETING! -->
 

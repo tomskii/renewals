@@ -21,16 +21,6 @@
 	<script type="text/javascript" src="scripts/application.js"></script>
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideNewEmail").click(function(){
-				$("#newEmail").hide();
-		});
-		$(".showNewEmail").click(function(){
-				$("#newEmail").show();
-		});
-	});
-	</script>
 </head>
 <body>
 
@@ -38,39 +28,34 @@
 	<main id="content">
 
 <!-- DELETE FROM HERE -->
-<br>
+<!--<br>
+
 <header class="page-header-sub">
 	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
-</header>
+</header>-->
 <br>
+<div class="grid-row">
+    <div class="column-two-thirds">
+    <label class="form-label-bold label">You are not eligible for the Registered Traveller Service</label>
+<br><br>
+        <p>You don't hold a visa, residence permit or immigration leave in one of the currently eligible categories:</p>
+        <ul class="list-bullet">
+          <li>Tiers 1, 2 or 4</li>
+          <li>Tier 5 (excluding Creative/Sporting concession)</li>
+          <li>Indefinite Leave to Remain</li>
+          <li>Naturalisation</li>
+          <li>UK Ancestry</li>
+          <li>Family member or spouse/partner</li>
+        </ul>
+        <p>You can still <a href="https://www.gov.uk/browse/visas-immigration">enter the UK in the normal way</a></p>
+    <a href="/backToGovUk" class="button" role="button">Exit to GOV.UK </a>
 
-<div class="form-group">
-	<fieldset class="inline" id="validVisaOrResidentsPermit">
-		<label class="form-label-bold label" for="passportNationality" data-label="">Has your email address changed?</label>
-		<p class="form-hint panel-indent">Your current email is nick.cowan@hotmail.com</p>
-		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_true" name="validVisaOrResidentsPermit" value="Yes" tabindex="1" data-button-page="summary.html" data-button-id="#continuebutton" value="Yes" class="showNewEmail">
-			<label class="block-label" for="validVisaOrResidentsPermit_true">Yes</label>
-		</div>
-		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="summary.html" data-button-id="#continuebutton" value="Yes" class="hideNewEmail">
-      <label class="block-label" for="validVisaOrResidentsPermit_false">No</label>
-		</div>
-		<br>
-	</fieldset>
-</div>
+    </div>
+      </div>
 
-<fieldset class="inline panel-indent" id="newEmail" style="display: none">
-<div class="form-group">
-	<label class="bold-small label" for="passportNumber" data-label="">What is your new email address?</label>
-	<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
-</div>
-</fieldset>
-
-
-	<div class="form-group">
-		<a class="button" href="" id="continuebutton">Continue</a>
-	</div>
+	<!-- <div class="form-group">
+		<a class="button" href="changed.html" id="continuebutton">Continue</a>
+	</div>-->
 
 <!-- STOP DELETING! -->
 
