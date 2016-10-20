@@ -1829,3 +1829,5 @@ select {
     -moz-appearance: menulist !important;
     appearance: menulist !important;
 }
+.ui-helper-hidden-accessible {display: none}
+.ineligible-header {font-size: 25px}

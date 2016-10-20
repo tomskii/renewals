@@ -1,0 +1,81 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Registered Traveller</title>
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if gt IE 8]><!--><link href="/govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+	<!--[if IE 6]><link href="/govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link href="/govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 8]><link href="/govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<link href="/govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+	<link href="/govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="/govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="/scripts/form.storage.js"></script>
+	<script type="text/javascript" src="/scripts/application.js"></script>
+	<script type="text/javascript" src="/scripts/details.polyfill.js"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
+
+
+	<script>
+	var makePath = function(form) {
+	  form.action = document.getElementById('reasonForTravel').value;
+	};
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("#reasonForTravel").val("blank");
+	});
+	</script>
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content">
+
+<!-- DELETE FROM HERE -->
+<br>
+<header class="page-header-sub">
+	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
+</header>
+<br>
+
+<form onsubmit='makePath(this);'>
+	<div id="reasonForTravel-group" class="form-group">
+    <label for="reasonForTravel" class="form-label-bold">
+        <span class="hide-label">What is your reason for travel to the UK?
+    </label>
+
+    <select id="reasonForTravel" class="form-control" name="reasonForTravel" aria-required="true">
+        <option value="blank" selected></option>
+        <option value="reason-for-travel-q2.html">Business visitor</option>
+        <option value="reason-for-travel-q2.html" >General visitor</option>
+        <option value="/update.html" >Member of Diplomatic Mission</option>
+        <option value="reason-for-travel-q2.html" >Academic visitor</option>
+        <option value="reason-for-travel-q2.html" >Entertainment or Sports visitor</option>
+        <option value="reason-for-travel-q2.html" >In transit - passing through the UK</option>
+        <option value="reason-for-travel-q2.html" >Parents with a child in a UK school</option>
+        <option value="reason-for-travel-q2.html" >Medical visitor</option>
+        <option value="/ineligible-reason.html" >Paid work - Permitted Paid Engagement</option>
+        <option value="/ineligible-reason.html" >Coming to the UK for my wedding</option>
+        <option value="/ineligible-reason.html" >None of the above</option>
+    </select>
+</div>
+<div class="form-group">
+	<button class="button" type="submit" id="submit">Continue</button>
+</div>
+</form>
+
+
+<!-- STOP DELETING! -->
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>
