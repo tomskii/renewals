@@ -36,6 +36,9 @@
 								'Nicaragua', 'Panama', 'Paraguay', 'Uruguay', 'Australia', 'New Zealand'], selectValue)){
 						window.location.href = 'passport-update-number.html';
 						event.preventDefault();
+					} else if (_.includes([''], selectValue)){
+						$(".countryHint").show();
+						event.preventDefault();
 					} else {
 						window.location.href = '/ineligible-country.html';
 						event.preventDefault();
@@ -43,6 +46,7 @@
 				});
 				$('select').selectToAutocomplete();
 			});
+
 		})(jQuery);
 	</script>
 	<style>
@@ -93,6 +97,9 @@
 		<div class="form-group">
 			<fieldset class="inline" id="passportNationality">
 				<label class="form-label-bold label" for="passportNationality" data-label="Nationality">What country or territory is your passport from?</label>
+				<div class="countryHint" style="display:none">
+					<p>Please enter the country or territory that your passport is from</p>
+				</div>
 				<select class="form-control check-name-field" name="Country" id="country-selector" autofocus="autofocus" autocorrect="off" autocomplete="off">
 		      <option value="" selected="selected">Select Country</option>
 		      <option value="Afghanistan" data-alternative-spellings="AF افغانستان">Afghanistan</option>

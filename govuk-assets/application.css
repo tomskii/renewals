@@ -1831,3 +1831,13 @@ select {
 }
 .ui-helper-hidden-accessible {display: none}
 .ineligible-header {font-size: 25px}
+.countryHint {
+    border-left: 8px #B10E1E solid;
+    padding: 10px 0 0px;
+    color: #B10E1E
+  }
+  .countryHint p {
+      padding: 0 0 15px 10px;
+      font-weight: bold;
+    }
+.signinlabel {font-size: 21px}
