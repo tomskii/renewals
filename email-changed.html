@@ -21,16 +21,7 @@
 	<script type="text/javascript" src="scripts/application.js"></script>
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideNewEmail").click(function(){
-				$("#newEmail").hide();
-		});
-		$(".showNewEmail").click(function(){
-				$("#newEmail").show();
-		});
-	});
-	</script>
+	
 </head>
 <body>
 
@@ -49,29 +40,20 @@
 		<label class="form-label-bold label" for="passportNationality" data-label="">Has your email address changed?</label>
 		<p class="form-hint panel-indent">Your current email is nick.cowan@hotmail.com</p>
 		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_true" name="validVisaOrResidentsPermit" value="Yes" tabindex="1" data-button-page="summary.html" data-button-id="#continuebutton" value="Yes" class="showNewEmail">
+			<input type="radio" id="validVisaOrResidentsPermit_true" name="validVisaOrResidentsPermit" value="Yes" tabindex="1" data-button-page="email-enter.html" data-button-id="#continuebutton" value="Yes">
 			<label class="block-label" for="validVisaOrResidentsPermit_true">Yes</label>
 		</div>
 		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="summary.html" data-button-id="#continuebutton" value="Yes" class="hideNewEmail">
+			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="summary.html" data-button-id="#continuebutton" value="No">
       <label class="block-label" for="validVisaOrResidentsPermit_false">No</label>
 		</div>
 		<br>
 	</fieldset>
 </div>
 
-<fieldset class="inline panel-indent" id="newEmail" style="display: none">
 <div class="form-group">
-	<label class="bold-small label" for="passportNumber" data-label="">What is your new email address?</label>
-	<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
+	<a class="button" href="" id="continuebutton">Continue</a>
 </div>
-</fieldset>
-
-
-	<div class="form-group">
-		<a class="button" href="" id="continuebutton">Continue</a>
-	</div>
-
 <!-- STOP DELETING! -->
 
 	</main>
