@@ -27,11 +27,7 @@
 		    var parameters = location.search.substring(1).split("&");
 		    var temp = parameters[0].split("=");
 				l = decodeURI(temp[1]);
-		    l = l.replace('+',' ');
-				l = l.replace('+',' ');
-				l = l.replace('+',' ');
-				l = l.replace('+',' ');
-				l = l.replace('+',' ');
+		    l = l.replace('%40','@');
 		  }
 		  processForm();
 			$(document).ready(function(){
