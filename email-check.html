@@ -22,18 +22,19 @@
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
 	<script language="JavaScript">
-		  function processForm()
-		  {
-		    var parameters = location.search.substring(1).split("&");
-		    var temp = parameters[0].split("=");
+			function getValue()
+			{
+				var parameters = location.search.substring(1).split("&");
+				var temp = parameters[0].split("=");
 				l = decodeURI(temp[1]);
-		    l = l.replace('%40','@');
-		  }
-		  processForm();
+				l = l.replace('%40','@');
+			}
+			getValue();
 			$(document).ready(function(){
 					$('#checkEmail').attr('value',l);
 			})
 		</script>
+
 </head>
 <body>
 
@@ -47,17 +48,13 @@
 </header>
 <br>
 
-
 <fieldset id="newEmail">
 <div class="form-group">
 	<label class="form-label-bold label" for="checkEmail" data-label="">Check your new email address</label>
-	<p class="panel-indent">
-		It's really important that we have your correct email address as this is where we'll send important information
-	</p>
-	<input type="text" class="form-control form-control-3-4" id="checkEmail" name="checkEmail" />
+	<p class="panel-indent">It's really important that we have your correct email address as this is where we'll send important information</p>
+	<input type="text" class="form-control form-control-3-4" id="checkEmail" />
 </div>
 </fieldset>
-
 
 	<div class="form-group">
 		<a class="button" href="summary.html" id="continuebutton">Yes – this is my email address</a>

@@ -21,37 +21,7 @@
 	<script type="text/javascript" src="scripts/application.js"></script>
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-    $("#validVisaOrResidentsPermit_false").click(function(){
-        $("#VisaPermitsWrapper").hide();
-				$("#block_hasVisa_No").show();
-    });
-		$("#validVisaOrResidentsPermit_true").click(function(){
-        $("#VisaPermitsWrapper").show();
-				$("#block_hasVisa_No").hide();
-    });
-		$("#visasAndPermits").change(function(){
-			$("#VisaCategoriesWrapper").hide();
-			if ($(this).val()==='none') {
-        $("#VisaCategoriesWrapper").show();
-			}
-    });
-		$("#visasCategories").change(function(){
-			$("#otherCategoriesWrapper").hide();
-			if ($(this).val()==='none') {
-        $("#otherCategoriesWrapper").show();
-			}
-    });
 
-		$("#reasonForTravel").change(function(){
-			$("#travelledEnoughWrapper").hide();
-			if (['BV', 'GV', 'VPC', 'AV', 'ESV', 'VPC', 'MV', 'IT'].indexOf($(this).val()) > -1) {
-				$("#travelledEnoughWrapper").show();
-			}
-		});
-});
-</script>
 </head>
 <body>
 
@@ -64,22 +34,28 @@
 	<span class="section-number">Summary</span>
 </header>
 <br>
+<div class="playback-container" name="test-form">
 
-<div class="form-group">
-		<div class="form-group" data-group-name="passportNationality">
-			<fieldset class="inline" id="passportNationality">
-				<label class="form-label-bold label" for="passportNationality" data-label="Nationality">Check your details before continuing</label>
+		<div class="form-group form-group">
+			<fieldset class="inline">
+				<label class="form-label-bold label">Check your details before continuing</label>
 
 			<ul class="nojs" id="summary">
+				<li class="clearfix"><a href="#">Change</a><h2>Passport country or territory</h2><p class="playback-cell" data-playback="passportNumber">United States</p></li>
 
-				<li class="clearfix" data-name="flightNumber"><a href="#travel-details?edit=flightNumber" id="edit_flightNumber">Change</a><h2>Passport</h2><p class="summary-data">[Value]</p></li>
+				<li class="clearfix"><a href="#">Change</a><h2>Passport number</h2><p class="playback-cell" data-playback="passportNumber">*****910</p></li>
 
-				<li class="clearfix" data-name="arrivalDate"><a href="#travel-details?edit=arrivalDate" id="edit_arrivalDate">Change</a><h2>Visa</h2><p class="summary-data">[Value]</p></li>
+				<li class="clearfix"><a href="#">Change</a><h2>Passport expiry date</h2><p class="playback-cell" data-playback="passportNumber">12/03/2021</p></li>
 
-				<li class="clearfix" data-name="arrivalDate"><a href="#travel-details?edit=arrivalDate" id="edit_arrivalDate">Change</a><h2>Email</h2><p class="summary-data">[Value]</p></li>
+				<li class="clearfix"><a href="#">Change</a><h2>Name on passport</h2><p class="playback-cell" data-playback="passportNumber">Paul Smith</p></li>
+
+				<li class="clearfix"><a href="#">Change</a><h2>Visa or travel purpose</h2><p class="playback-cell" data-playback="visasAndPermits">Business visitor</p></li>
+
+				<li class="clearfix"><a href="#">Change</a><h2>Email</h2><p class="playback-cell" data-playback="checkEmail">paul.smith@hotmail.com</p></li>
+
 		</ul>
 </div>
-
+</div>
 	<div class="form-group">
 		<a class="button" href="declaration.html" id="continuebutton">Confirm</a>
 	</div>
