@@ -21,37 +21,6 @@
 	<script type="text/javascript" src="scripts/application.js"></script>
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-    $("#validVisaOrResidentsPermit_false").click(function(){
-        $("#VisaPermitsWrapper").hide();
-				$("#block_hasVisa_No").show();
-    });
-		$("#validVisaOrResidentsPermit_true").click(function(){
-        $("#VisaPermitsWrapper").show();
-				$("#block_hasVisa_No").hide();
-    });
-		$("#visasAndPermits").change(function(){
-			$("#VisaCategoriesWrapper").hide();
-			if ($(this).val()==='none') {
-        $("#VisaCategoriesWrapper").show();
-			}
-    });
-		$("#visasCategories").change(function(){
-			$("#otherCategoriesWrapper").hide();
-			if ($(this).val()==='none') {
-        $("#otherCategoriesWrapper").show();
-			}
-    });
-
-		$("#reasonForTravel").change(function(){
-			$("#travelledEnoughWrapper").hide();
-			if (['BV', 'GV', 'VPC', 'AV', 'ESV', 'VPC', 'MV', 'IT'].indexOf($(this).val()) > -1) {
-				$("#travelledEnoughWrapper").show();
-			}
-		});
-});
-</script>
 </head>
 <body>
 
@@ -67,7 +36,7 @@
 <p>We will email you 28 days before your membership expires with instructions on how to renew.</p>
 
 </div>
-		<div class="form-group" data-group-name="passportNationality">
+		<div class="" data-group-name="passportNationality">
 			<fieldset class="inline" id="passportNationality">
 				<label class="form-label-bold label" for="passportNationality" data-label="Nationality">Your details</label>
 
