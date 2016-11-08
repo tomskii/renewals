@@ -1578,7 +1578,7 @@ h2.heading-medium.less-space {margin: 1em 0 0.5em 0}
 #summary li .button, #imageUpload li .button {
     width: auto;
 }
-#summary a, #imageUpload a {
+#summary a, #imageUpload a, #summary span.nonlink {
     float: right;
     margin-top: 0.5em;
 }
