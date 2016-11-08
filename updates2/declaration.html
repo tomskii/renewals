@@ -24,16 +24,7 @@
 <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
-});
-</script>
+
 </head>
 <body>
 
@@ -41,32 +32,38 @@
 	<main id="content">
 
 <!-- DELETE FROM HERE -->
-<br>
-<header class="page-header-sub">
-	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
+
+<br><header class="page-header-sub">
+	<span class="section-number">Declaration</span>
 </header>
 <br>
 
-<fieldset class="inline">
 <div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
+	<p class="form-label-bold label">I confirm that:</p>
+	<ul class="list list-bullet text">
+		<li>the information supplied is complete, true and correct to the best of my knowledge</li>
+</ul><br>
+	<p class="form-label-bold label">I understand that:</p>
+	<ul class="list list-bullet text">
+		<li>my details may in certain circumstances be passed to fraud prevention agencies to prevent and detect fraud and money laundering</li>
+		<li>other agencies may provide Border Force with information about me</li>
+		<li>there is a £20 non refundable fee to apply to update my passport</li>
+	</ul>
 </div>
 
 <div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
-</div>
-
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
-</div>
-</fieldset>
-
+        <form name="saveDetails">
+					<div class="declaration-wrapper">
+						<input id="saveDetails-1" name="saveDetails" value="" type="checkbox" data-storage="yes"  data-button-page="payment.html" data-button-id="#continuebutton">
+						<label class="block-label" for="saveDetails-1">
+							<span style="display:block">I understand and agree with the above declarations</span>
+            </label>
+					</div>
+        </form>
+        </div>
 
 	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
+		<a class="button" href="" id="continuebutton">Confirm</a>
 	</div>
 
 <!-- STOP DELETING! -->

@@ -24,16 +24,7 @@
 <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
-});
-</script>
+
 </head>
 <body>
 
@@ -41,33 +32,27 @@
 	<main id="content">
 
 <!-- DELETE FROM HERE -->
-<br>
-<header class="page-header-sub">
-	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
+<div class="form-group">
+<header class="header-notice-complete">
+		<h1>A successful payment of £20 has been received for your application</h1>
 </header>
-<br>
 
-<fieldset class="inline">
-<div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
-</div>
+<p>Your membership number is RTW9BJ3AW</p>
 
-<div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
-</div>
+	<p>We have sent a confirmation email to <a href="mailto:">andrea.mario@hotmail.com</a>.</p>
 
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
-</div>
-</fieldset>
+	<h2 class="bold-small">What happens next?</h2>
 
+	<p>We’ll carry out background checks to see if you’re still eligible for Registered Traveller.</p>
+
+	<p>We’ll email you within 10 working days to let you know whether your application has been successful.</p>
 
 	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
+		<a class="button" href="/update2-passport-changed.html" id="continuebutton">Back to membership details</a>
 	</div>
+
+</div>
+
 
 <!-- STOP DELETING! -->
 

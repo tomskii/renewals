@@ -24,16 +24,20 @@
 <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
-});
-</script>
+	<script language="JavaScript">
+			function getValue()
+			{
+				var parameters = location.search.substring(1).split("&");
+				var temp = parameters[0].split("=");
+				l = decodeURI(temp[1]);
+				l = l.replace('%40','@');
+			}
+			getValue();
+			$(document).ready(function(){
+					$('#checkEmail').attr('value',l);
+			})
+		</script>
+
 </head>
 <body>
 
@@ -47,26 +51,17 @@
 </header>
 <br>
 
-<fieldset class="inline">
+<fieldset id="newEmail">
 <div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
-</div>
-
-<div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
-</div>
-
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
+	<label class="form-label-bold label" for="checkEmail" data-label="">Check your new email address</label>
+	<p class="panel-indent">It's really important that we have your correct email address as this is where we'll send important information</p>
+	<input type="text" class="form-control form-control-3-4" id="checkEmail" />
 </div>
 </fieldset>
 
-
 	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
+		<a class="button" href="summary.html" id="continuebutton">Yes – this is my email address</a>
+		<p>If your email address is wrong, just change it above</p>
 	</div>
 
 <!-- STOP DELETING! -->

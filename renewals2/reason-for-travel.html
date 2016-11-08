@@ -24,16 +24,18 @@
 <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
+
+
+	<script>
+	var makePath = function(form) {
+	  form.action = document.getElementById('reasonForTravel').value;
+	};
+	</script>
 	<script>
 	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
-});
-</script>
+		$("#reasonForTravel").val("blank");
+	});
+	</script>
 </head>
 <body>
 
@@ -47,27 +49,32 @@
 </header>
 <br>
 
-<fieldset class="inline">
-<div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
+<form onsubmit='makePath(this);'>
+	<div id="reasonForTravel-group" class="form-group">
+    <label for="reasonForTravel" class="form-label-bold">
+        <span class="hide-label">What is your reason for travel to the UK?
+    </label>
+
+    <select id="reasonForTravel" class="form-control" name="reasonForTravel" aria-required="true">
+        <option value="blank" selected></option>
+        <option value="reason-for-travel-q2.html">Business visitor</option>
+        <option value="reason-for-travel-q2.html" >General visitor</option>
+        <option value="email-changed.html" >Member of Diplomatic Mission</option>
+        <option value="reason-for-travel-q2.html" >Academic visitor</option>
+        <option value="reason-for-travel-q2.html" >Entertainment or Sports visitor</option>
+        <option value="reason-for-travel-q2.html" >In transit - passing through the UK</option>
+        <option value="reason-for-travel-q2.html" >Parents with a child in a UK school</option>
+        <option value="reason-for-travel-q2.html" >Medical visitor</option>
+        <option value="ineligible-reason.html" >Paid work - Permitted Paid Engagement</option>
+        <option value="ineligible-reason.html" >Coming to the UK for my wedding</option>
+        <option value="ineligible-reason.html" >None of the above</option>
+    </select>
 </div>
-
 <div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
+	<button class="button" type="submit" id="submit">Continue</button>
 </div>
+</form>
 
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
-</div>
-</fieldset>
-
-
-	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
-	</div>
 
 <!-- STOP DELETING! -->
 

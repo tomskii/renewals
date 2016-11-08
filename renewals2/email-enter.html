@@ -26,14 +26,19 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
 	<script>
 	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
+		$(".hideNewEmail").click(function(){
+				$("#newEmail").hide();
 		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
+		$(".showNewEmail").click(function(){
+				$("#newEmail").show();
 		});
-});
-</script>
+	});
+	function init() {
+	// Clear forms here
+	document.getElementById("email").value = "";
+	}
+	window.onload = init;
+	</script>
 </head>
 <body>
 
@@ -47,28 +52,19 @@
 </header>
 <br>
 
-<fieldset class="inline">
-<div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
-</div>
 
-<div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
-</div>
 
+<form action="email-check.html" method="GET">
+<fieldset class="inline" id="newEmail">
 <div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
+	<label class="form-label-bold label" for="email" data-label="">What is your new email address?</label>
+	<input type="text" class="form-control form-control-3-4" id="email" name="email" />
 </div>
 </fieldset>
-
-
-	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
+	<div id="button-box" class="form-group">
+		<button class="button" id="continuebutton"><span data-lang="eng">Continue</span></button>
 	</div>
-
+				</form>
 <!-- STOP DELETING! -->
 
 	</main>

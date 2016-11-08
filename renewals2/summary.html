@@ -24,16 +24,6 @@
 <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
-});
-</script>
 </head>
 <body>
 
@@ -41,32 +31,30 @@
 	<main id="content">
 
 <!-- DELETE FROM HERE -->
-<br>
-<header class="page-header-sub">
-	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
+
+<br> <header class="page-header-sub">
+	<span class="section-number">Summary</span>
 </header>
 <br>
+<div class="playback-container" name="test-form">
 
-<fieldset class="inline">
-<div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
+		<div class="">
+			<fieldset class="inline">
+				<label class="form-label-bold label">Check your details before continuing</label>
+
+			<ul class="nojs" id="summary">
+				<li class="clearfix"><a href="#">Change</a><h2>Name on passport</h2><p class="playback-cell" data-playback="passportNumber">Andrea Mario</p></li>
+				<li class="clearfix"><a href="#">Change</a><h2>Passport number</h2><p class="playback-cell" data-playback="passportNumber">****1108</p></li>
+				<li class="clearfix"><a href="#">Change</a><h2>Passport country or territory</h2><p class="playback-cell" data-playback="passportNumber">United States</p></li>
+				<li class="clearfix"><a href="#">Change</a><h2>Passport expiry date</h2><p class="playback-cell" data-playback="passportNumber">20/05/2018</p></li>
+				<li class="clearfix"><a href="#">Change</a><h2>Visa or travel purpose</h2><p class="playback-cell" data-playback="visasAndPermits">Tiers 1, 2 or 4</p></li>
+				<li class="clearfix"><a href="#">Change</a><h2>Email</h2><p class="playback-cell" data-playback="checkEmail">andrea.mario@hotmail.com</p></li>
+
+		</ul>
 </div>
-
-<div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
 </div>
-
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
-</div>
-</fieldset>
-
-
 	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
+		<a class="button" href="/declaration.html" id="continuebutton">Confirm</a>
 	</div>
 
 <!-- STOP DELETING! -->

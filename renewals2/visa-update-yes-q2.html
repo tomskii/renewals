@@ -26,14 +26,14 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
 	<script>
 	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
+		$(".hideOther").click(function(){
+				$("#other").hide();
 		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
+		$(".showOther").click(function(){
+				$("#other").show();
 		});
-});
-</script>
+	});
+	</script>
 </head>
 <body>
 
@@ -47,26 +47,78 @@
 </header>
 <br>
 
-<fieldset class="inline">
 <div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
+	<label class="form-label-bold label" for="passportNationality" data-label="">Which of the following UK visa or residence permits do you have?</label>
+
+	<fieldset id="visasAndPermits-group" class="radios-stacked" role="radiogroup" aria-required="true">
+
+		<div class="radio-wrapper">
+			<input
+			class="hideOther"
+			type="radio"
+			id="visasAndPermits-TRS"
+			name="visasAndPermits"
+			value="TRS"
+			data-button-page="ineligible-categories.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-TRS">Tier 5 Creative/Sporting concession</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			class="hideOther"
+			type="radio"
+			id="visasAndPermits-TR5"
+			name="visasAndPermits"
+			value="TR5"
+			data-button-page="ineligible-categories.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-TR5">Discretionary Leave</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			class="hideOther"
+			type="radio"
+			id="visasAndPermits-R"
+			name="visasAndPermits"
+			value="R"
+			data-button-page="ineligible-categories.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-R">Humanitarian Protection</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			class="hideOther"
+			type="radio"
+			id="visasAndPermits-PMR"
+			name="visasAndPermits"
+			value="PMR"
+			data-button-page="ineligible-categories.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-PMR">Leave Outside the Rules</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			class="showOther"
+			type="radio"
+			id="visasAndPermits-none"
+			name="visasAndPermits"
+			value="none"
+			data-button-page="email-changed.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-none">I don’t have any of these</label>
+		</div>
+	</fieldset>
 </div>
 
+<fieldset class="inline panel-indent" id="other" style="display: none">
 <div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
-</div>
-
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
+	<label class="bold-small label" for="passportNumber" data-label="">Which UK visa, residence permit or leave do you currently hold?</label>
+	<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
 </div>
 </fieldset>
 
-
 	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
+		<a class="button" href="" id="continuebutton">Continue</a>
 	</div>
 
 <!-- STOP DELETING! -->

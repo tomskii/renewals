@@ -24,16 +24,6 @@
 <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
-});
-</script>
 </head>
 <body>
 
@@ -41,33 +31,42 @@
 	<main id="content">
 
 <!-- DELETE FROM HERE -->
+
+<!--<br><header class="page-header-sub">
+	<span class="section-number">Declaration</span>
+</header>-->
 <br>
-<header class="page-header-sub">
-	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
-</header>
-<br>
 
-<fieldset class="inline">
-<div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
-</div>
+<form action="/make-payment" method="post" class="form">
+    <input type="hidden" name="_csrf" value="GQQpyQP7-0j5iDSEZWyfoRY5zZngJAvQMrDk">
+    <input type="hidden" name="objectId" value="5788a0203730e9e5778e41d6" />
+    <h1 class="form-label-bold label" data-lang="eng">Enter your card details</h1>
+    <div class="form-group">
+			<div class="form-group">
+				<label class="bold-small label" for="first-middle-names">Card number</label>
+				<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
+			</div>
 
-<div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
-</div>
+			<div class="form-group">
+					<label class="bold-small label more-margin-below" for="passportExpiry" data-label="Passport expiry date">Expiry date</label>
+					<div class="form-date" id="passportExpiry">
+							<div class="form-group form-group-day">
+									<label for="exp-day">Month</label>
+									<input autocomplete="off" type="text" class="form-control" id="exp-day" name="expiryDate_day" maxlength="2">
+							</div>
+							<div class="form-group form-group-day">
+									<label for="exp-yr">Year</label>
+									<input autocomplete="off" type="text" class="form-control" id="exp-yr" name="expiryDate_day" maxlength="2">
+							</div>
+					</div>
+			</div>
 
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
-</div>
-</fieldset>
-
-
-	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
-	</div>
+    <!-- Submit -->
+    <div class="form-group">
+        <a href="confirmation.html"><span class="button" id="continuebutton">Continue</a></span>
+    </div>
+		</div>
+</form>
 
 <!-- STOP DELETING! -->
 

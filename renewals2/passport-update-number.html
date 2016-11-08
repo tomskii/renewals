@@ -24,16 +24,6 @@
 <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
-});
-</script>
 </head>
 <body>
 
@@ -47,27 +37,19 @@
 </header>
 <br>
 
-<fieldset class="inline">
 <div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
-</div>
-
-<div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
-</div>
-
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
-</div>
-</fieldset>
-
+	<fieldset class="inline">
+		<label class="form-label-bold label" for="passportNumber">What is your new passport number?</label>
+		<p class="form-hint">Use the number on your passport photo page, include any starting zeros</p>
+		<div class="form-group">
+			<input autocomplete="off" class="form-control" id="passportNumber" type="text" value="" >
+		</div>
+	</fieldset>
 
 	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
+		<a class="button" href="passport-update-expiry.html" id="continuebutton">Continue</a>
 	</div>
+</div>
 
 <!-- STOP DELETING! -->
 

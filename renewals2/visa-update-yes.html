@@ -1,0 +1,138 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Registered Traveller</title>
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if gt IE 8]><!--><link href="/govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+<!--[if IE 6]><link href="/govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]><link href="/govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 8]><link href="/govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<link href="/govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+<link href="/govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/form.storage.js"></script>
+<script type="text/javascript" src="/scripts/application.js"></script>
+<script type="text/javascript" src="/scripts/details.polyfill.js"></script>
+<script type="text/javascript" src="/scripts/jquery.select-to-autocomplete.js"></script>
+<script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/scripts/lodash.js"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content">
+
+<!-- DELETE FROM HERE -->
+<br>
+<header class="page-header-sub">
+	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
+</header>
+<br>
+
+<div class="form-group">
+	<label class="form-label-bold label">Which of the following UK visa or residence permits do you have?</label>
+
+	<fieldset id="visasAndPermits-group" name="visasAndPermits" class="radios-stacked" role="radiogroup" aria-required="true">
+
+		<div class="radio-wrapper">
+			<input
+			type="radio"
+			id="visasAndPermits-TRS"
+			name="visasAndPermits"
+			value="Tiers 1, 2 or 4"
+			data-button-page="email-changed.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-TRS">Tiers 1, 2 or 4</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			type="radio"
+			id="visasAndPermits-TR5"
+			name="visasAndPermits"
+			value="Tier 5 (excluding Creative/Sporting concession)"
+			data-button-page="email-changed.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-TR5">Tier 5 (excluding Creative/Sporting concession)</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			type="radio"
+			id="visasAndPermits-R"
+			name="visasAndPermits"
+			value="Indefinite Leave to Remain"
+			data-button-page="email-changed.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-R">Indefinite Leave to Remain</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			type="radio"
+			id="visasAndPermits-PMR"
+			name="visasAndPermits"
+			value="Naturalisation"
+			data-button-page="email-changed.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-PMR">Naturalisation</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			type="radio"
+			id="visasAndPermits-UKA"
+			name="visasAndPermits"
+			value="UK Ancestry"
+			data-button-page="email-changed.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-UKA">UK Ancestry</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			type="radio"
+			id="visasAndPermits-EEA"
+			name="visasAndPermits"
+			value="EEA"
+			data-button-page="ineligible-categories.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-EEA">EEA Family Permit</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			type="radio"
+			id="visasAndPermits-DSP"
+			name="visasAndPermits"
+			value="Family member or spouse/partner"
+			data-button-page="email-changed.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-DSP">Family member or spouse/partner</label>
+		</div>
+		<div class="radio-wrapper">
+			<input
+			type="radio"
+			id="visasAndPermits-none"
+			name="visasAndPermits"
+			value="none"
+			data-button-page="visa-update-yes-q2.html"
+			data-button-id="#continuebutton">
+			<label class="block-label" for="visasAndPermits-none">I don’t have any of these</label>
+		</div>
+	</fieldset>
+</div>
+
+
+	<div class="form-group">
+		<a class="button" href="" id="continuebutton">Continue</a>
+	</div>
+
+<!-- STOP DELETING! -->
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>

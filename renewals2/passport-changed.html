@@ -24,16 +24,6 @@
 <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
-});
-</script>
 </head>
 <body>
 
@@ -47,26 +37,28 @@
 </header>
 <br>
 
-<fieldset class="inline">
 <div class="form-group">
-	<label class="form-label-bold label">Your name</label>
-	<p class="form-hint margin-none-bottom">Enter your full name, as written in your passport</p>
-</div>
+	<fieldset class="inline" id="validVisaOrResidentsPermit">
+		<label class="form-label-bold label" for="passportNationality" data-label="">Has your passport changed?</label>
+		<p class="form-hint panel-indent">Your current passport ends in *****2339</p>
 
-<div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
-</div>
+		<div class="radio-wrapper">
+			<input type="radio" id="validVisaOrResidentsPermit_true" name="validVisaOrResidentsPermit" value="Yes" tabindex="1" data-button-page="passport-update-nationality.html" data-button-id="#continuebutton" value="Yes">
+			<label class="block-label" for="validVisaOrResidentsPermit_true">Yes</label>
+		</div>
 
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
+		<div class="radio-wrapper">
+			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="visa-changed.html" data-button-id="#continuebutton" value="Yes">
+      <label class="block-label" for="validVisaOrResidentsPermit_false">No</label>
+		</div>
+		<br>
+
+	</fieldset>
 </div>
-</fieldset>
 
 
 	<div class="form-group">
-		<a class="button" href="summary.html" id="continuebutton">Continue</a>
+		<a class="button" href="" id="continuebutton">Continue</a>
 	</div>
 
 <!-- STOP DELETING! -->
