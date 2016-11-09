@@ -28,27 +28,33 @@
 	<main id="content">
 
 <!-- DELETE FROM HERE -->
+<br>
+<header class="page-header-sub">
+	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
+</header>
+<br>
 
-<div class="form-group" data-group-name="passportNationality">
+<div class="form-group">
+	<fieldset class="inline" id="validVisaOrResidentsPermit">
+		<label class="form-label-bold label" for="passportNationality" data-label="">Has your visa or travel purpose changed?</label>
+		<p class="form-hint panel-indent">Your current visa or travel purpose is Tiers 1, 2 or 4</p>
+		<div class="radio-wrapper">
+			<input type="radio" id="validVisaOrResidentsPermit_true" name="validVisaOrResidentsPermit" value="Yes" tabindex="1" data-button-page="/updates/visa-update.html" data-button-id="#continuebutton" value="Yes">
+			<label class="block-label" for="validVisaOrResidentsPermit_true">Yes</label>
+		</div>
+		<div class="radio-wrapper">
+			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="update3.html" data-button-id="#continuebutton" value="Yes">
+      <label class="block-label" for="validVisaOrResidentsPermit_false">No</label>
+		</div>
+		<br>
 
-	<h1 class="heading-large">Your membership expires in 20 days</h1>
-
-	<p>You need to <a href="renew1.html">renew your membership</a> before 4 December 2016. You can update your passport, visa or email address at the same time as <a href="renew1.html">renewing</a>.</p>
-
+	</fieldset>
 </div>
-		<div class="" data-group-name="passportNationality">
-			<fieldset class="inline" id="passportNationality">
-				<label class="form-label-bold label" for="passportNationality" data-label="Nationality">Your details</label>
 
-			<ul class="nojs" id="summary">
 
-				<li class="clearfix"><a href="/updates/passport-update-nationality.html">Update  &ndash; &pound;20</a><h2>Passport number</h2><p class="summary-data">*****1108</p></li>
-
-				<li class="clearfix"><a href="/updates/visa-update.html" class="">Update</a><h2>Visa or travel purpose</h2><p class="summary-data">Tiers 1, 2 or 4</p></li>
-
-				<li class="clearfix"><a href="/updates/email-enter.html" class="">Update</a><h2>Email</h2><p class="summary-data">andrea.mario@hotmail.com</p></li>
-		</ul>
-</div>
+	<div class="form-group">
+		<a class="button" href="" id="continuebutton">Continue</a>
+	</div>
 
 <!-- STOP DELETING! -->
 
