@@ -31,37 +31,42 @@
 	<main id="content">
 
 <!-- DELETE FROM HERE -->
+
+<!--<br><header class="page-header-sub">
+	<span class="section-number">Declaration</span>
+</header>-->
 <br>
-<header class="page-header-sub">
-	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
-</header>
-<br>
 
-<div class="form-group">
-	<fieldset class="inline" id="validVisaOrResidentsPermit">
-		<label class="form-label-bold label" for="passportNationality" data-label="">Has your passport changed?</label>
-		<p class="form-hint panel-indent">
-			Your current passport ends in *****2339
-		</p>
+<form action="/make-payment" method="post" class="form">
+    <input type="hidden" name="_csrf" value="GQQpyQP7-0j5iDSEZWyfoRY5zZngJAvQMrDk">
+    <input type="hidden" name="objectId" value="5788a0203730e9e5778e41d6" />
+    <h1 class="form-label-bold label" data-lang="eng">Enter your card details</h1>
+    <div class="form-group">
+			<div class="form-group">
+				<label class="bold-small label" for="first-middle-names">Card number</label>
+				<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
+			</div>
 
-		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_true" name="validVisaOrResidentsPermit" value="Yes" tabindex="1" data-button-page="passport-update-nationality.html" data-button-id="#continuebutton" value="Yes">
-			<label class="block-label" for="validVisaOrResidentsPermit_true">Yes</label>
+			<div class="form-group">
+					<label class="bold-small label more-margin-below" for="passportExpiry" data-label="Passport expiry date">Expiry date</label>
+					<div class="form-date" id="passportExpiry">
+							<div class="form-group form-group-day">
+									<label for="exp-day">Month</label>
+									<input autocomplete="off" type="text" class="form-control" id="exp-day" name="expiryDate_day" maxlength="2">
+							</div>
+							<div class="form-group form-group-day">
+									<label for="exp-yr">Year</label>
+									<input autocomplete="off" type="text" class="form-control" id="exp-yr" name="expiryDate_day" maxlength="2">
+							</div>
+					</div>
+			</div>
+
+    <!-- Submit -->
+    <div class="form-group">
+        <a href="confirmation.html"><span class="button" id="continuebutton">Continue</a></span>
+    </div>
 		</div>
-
-		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="visa-changed.html" data-button-id="#continuebutton" value="Yes">
-      <label class="block-label" for="validVisaOrResidentsPermit_false">No</label>
-		</div>
-		<br>
-
-	</fieldset>
-</div>
-
-
-	<div class="form-group">
-		<a class="button" href="" id="continuebutton">Continue</a>
-	</div>
+</form>
 
 <!-- STOP DELETING! -->
 

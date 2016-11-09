@@ -22,17 +22,17 @@
 	<script type="text/javascript" src="/scripts/details.polyfill.js"></script>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
 
-
+	<script>
+	$(document).ready(function(){
+		$("#reasonForTravel").val("error.html");
+	});
+	</script>
 	<script>
 	var makePath = function(form) {
 	  form.action = document.getElementById('reasonForTravel').value;
 	};
 	</script>
-	<script>
-	$(document).ready(function(){
-		$("#reasonForTravel").val("blank");
-	});
-	</script>
+
 </head>
 <body>
 
@@ -53,7 +53,7 @@
     </label>
 
     <select id="reasonForTravel" class="form-control" name="reasonForTravel" aria-required="true">
-        <option value="blank" selected></option>
+        <option value="error.html" selected></option>
         <option value="reason-for-travel-q2.html">Business visitor</option>
         <option value="reason-for-travel-q2.html" >General visitor</option>
         <option value="/update.html" >Member of Diplomatic Mission</option>
