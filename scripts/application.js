@@ -43,7 +43,7 @@ $( document ).ready(function() {
 
   $('.clearStorage').click(function(){
     localStorage.clear();
-    $(this).html('&#10003; Data cleared');
+    $(this).html('Continue');
   });
 
   $('input[type=checkbox]').removeAttr('checked');

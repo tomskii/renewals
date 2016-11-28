@@ -37,6 +37,7 @@
 </header>
 <br>
 
+<form name="test-form">
 <div class="form-group">
 	<div class="date-group" data-group-name="passportExpiry">
 			<fieldset>
@@ -44,19 +45,16 @@
 					<div class="form-date" id="passportExpiry">
 							<p class="form-hint">For example, 11 06 2019</p>
 							<div class="form-group form-group-day">
-									<label for="exp-day"><span class="visuallyhidden">New passport expiry date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
-									<input autocomplete="off" type="text" class="form-control" id="exp-day" name="expiryDate_day"
-												 aria-required="true" value="" maxlength="2">
+									<label for="exp-day"><span class="visuallyhidden">New passport expiry date </span>Day </label>
+									<input autocomplete="off" type="text" class="form-control" id="exp-day" name="exp-day" value="" maxlength="2">
 							</div>
 							<div class="form-group form-group-month">
-									<label for="exp-month"><span class="visuallyhidden">New passport expiry date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
-									<input autocomplete="off" type="text" class="form-control" id="exp-month" name="expiryDate_month"
-												 aria-required="true" value="" maxlength="2">
+									<label for="exp-month"><span class="visuallyhidden">New passport expiry date </span>Month </label>
+									<input autocomplete="off" type="text" class="form-control" id="exp-month" name="exp-month" value="" maxlength="2">
 							</div>
 							<div class="form-group form-group-year">
-									<label for="exp-year"><span class="visuallyhidden">New passport expiry date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
-									<input autocomplete="off" type="text" class="form-control" id="exp-year" name="expiryDate_year"
-												 aria-required="true" value="" maxlength="4">
+									<label for="exp-year"><span class="visuallyhidden">New passport expiry date </span>Year </label>
+									<input autocomplete="off" type="text" class="form-control" id="exp-year" name="exp-year" value="" maxlength="4">
 							</div>
 					</div>
 			</fieldset>
@@ -65,7 +63,8 @@
 	<div class="form-group">
 		<a class="button" href="passport-update-name.html" id="continuebutton">Continue</a>
 	</div>
-
+</div>
+</form
 <!-- STOP DELETING! -->
 
 	</main>
