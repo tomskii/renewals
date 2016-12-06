@@ -30,6 +30,11 @@
 					$("#newEmailWrapper").show();
 			});
 	});
+	function init() {
+	// Clear forms here
+	document.getElementById("newEmail").value = "";
+	}
+	window.onload = init;
 	</script>
 </head>
 <body>
@@ -53,30 +58,28 @@
 			<label class="block-label" for="validVisaOrResidentsPermit_true">Yes</label>
 		</div>
 		<div class="radio-wrapper">
-			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="summary.html" data-button-id="#continuebutton" value="No" class="showNewEmail">
+			<input type="radio" id="validVisaOrResidentsPermit_false" name="validVisaOrResidentsPermit" value="No" tabindex="2" data-button-page="email-check.html" data-button-id="#continuebutton" value="No" class="showNewEmail">
       <label class="block-label" for="validVisaOrResidentsPermit_false">No</label>
 		</div>
 		<br>
 	</fieldset>
 </div>
 
-
+<form action="email-check.html" method="GET">
 <div class="form-group"  id="newEmailWrapper" style="display: none">
-<form name="test-form">
 	<fieldset class="inline">
 		<div class="panel-indent">
 				<label class="bold-small label" for="newEmail" data-lang="eng">What is your new email address?</label>
 				<input type="text" id="newEmail" name="newEmail" class="form-control form-control-3-4" value="" maxlength="100">
 		</div>
 	</fieldset>
-</form>
 </div>
 
 
 <div class="form-group">
-	<a class="button" id="continuebutton" href=""><span data-lang="eng">Continue</span></a>
+	<button class="button" id="continuebutton"><span data-lang="eng">Continue</span></button>
 </div>
-
+</form>
 
 
 <!-- STOP DELETING! -->
