@@ -1663,7 +1663,7 @@ h2.heading-medium.less-space {margin: 1em 0 0.5em 0}
 }}
 .inline .block-label {
     clear: none;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 .js-enabled label.selected, .radio-wrapper input:checked + label, .declaration-wrapper input:checked + label {
     background: #fff;

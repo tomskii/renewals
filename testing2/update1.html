@@ -20,20 +20,7 @@
 <script type="text/javascript" src="/scripts/form.storage.js"></script>
 <script type="text/javascript" src="/scripts/application.js"></script>
 <script type="text/javascript" src="/scripts/details.polyfill.js"></script>
-<script type="text/javascript" src="/scripts/jquery.select-to-autocomplete.js"></script>
-<script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
-});
-</script>
 </head>
 <body>
 
@@ -41,34 +28,28 @@
 	<main id="content">
 
 <!-- DELETE FROM HERE -->
-<br>
-<header class="page-header-sub">
-	<a href="javascript:history.go(-1)" class="back-to-previous">Back</a>
-</header>
-<br>
 
-<form name="test-form">
-<fieldset class="inline">
-<div class="form-group">
-	<label class="form-label-bold label">What is your full name as written in your passport?</label>
+<div class="form-group" data-group-name="passportNationality">
+
+	<h1 class="heading-large">Your membership expires in 20 days</h1>
+
+	<p>You need to <a href="renew1.html">renew your membership</a> before 4 December 2016. You can update your passport, visa or email address at the same time as renewing.</p>
+
+</div>
+		<div class="" data-group-name="passportNationality">
+			<fieldset class="inline" id="passportNationality">
+				<label class="form-label-bold label" for="passportNationality" data-label="Nationality">Your details</label>
+
+			<ul class="nojs" id="summary">
+
+				<li class="clearfix"><a href="#">Update  &ndash; &pound;20</a><h2>Passport number</h2><p class="summary-data">*****1108</p></li>
+
+				<li class="clearfix"><a href="#" class="">Update</a><h2>Visa or travel purpose</h2><p class="summary-data">Tiers 1, 2 or 4</p></li>
+
+				<li class="clearfix"><a href="#" class="">Update</a><h2>Email</h2><p class="summary-data">andrea.mario@hotmail.com</p></li>
+		</ul>
 </div>
 
-<div class="form-group">
-	<label class="bold-small label" for="first-middle-names">First and middle names</label>
-	<input type="text" class="form-control form-control-3-4" id="first-middle-names" name="first-middle-names" />
-</div>
-
-<div class="form-group">
-	<label class="bold-small label" for="last-name">Last name</label>
-	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
-</div>
-</fieldset>
-
-
-	<div class="form-group">
-		<a class="button" href="visa-changed.html" id="continuebutton">Continue</a>
-	</div>
-</form>
 <!-- STOP DELETING! -->
 
 	</main>
