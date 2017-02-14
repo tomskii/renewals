@@ -20,20 +20,21 @@
 <script type="text/javascript" src="/scripts/form.storage.js"></script>
 <script type="text/javascript" src="/scripts/application.js"></script>
 <script type="text/javascript" src="/scripts/details.polyfill.js"></script>
-<script type="text/javascript" src="/scripts/jquery.select-to-autocomplete.js"></script>
-<script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/scripts/lodash.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css"/>
-	<script>
-	$(document).ready(function(){
-		$(".hideOtherNames").click(function(){
-				$("#otherNamesWrapper").hide();
-		});
-		$(".showOtherNames").click(function(){
-				$("#otherNamesWrapper").show();
-		});
+<script>
+$(document).ready(function(){
+	$(".hideNewEmail").click(function(){
+			$("#newEmailWrapper").show();
+	});
+	$(".showNewEmail").click(function(){
+			$("#newEmailWrapper").hide();
+	});
 });
 </script>
+</script>
+
+
+
 </head>
 <body>
 
@@ -47,10 +48,29 @@
 </header>
 <br>
 
-<form name="test-form">
-<fieldset class="inline">
+<fieldset>
+	<div class="form-group">
+
+			<label class="form-label-bold label">Has your name changed on your new passport?</label>
+
+			<div class="radio-wrapper">
+				<input type="radio" id="newname-yes" name="newNames" value="Yes" tabindex="1" class="hideNewEmail">
+				<label class="block-label" for="newname-yes">Yes</label>
+			</div>
+
+			<div class="radio-wrapper">
+				<input type="radio" id="newname-no" name="newNames" value="No" tabindex="2" class="showNewEmail">
+	      <label class="block-label" for="newname-no">No</label>
+			</div>
+			<br>
+
+
+	</div>
+
+<div class="panel-indent form-indent" id="newEmailWrapper" style="display: none">
+
 <div class="form-group">
-	<label class="form-label-bold label">What is your full name as written in your passport?</label>
+	<label class="form-label-bold label">What is your full name as written in your new passport?</label>
 </div>
 
 <div class="form-group">
@@ -62,13 +82,13 @@
 	<label class="bold-small label" for="last-name">Last name</label>
 	<input type="text" class="form-control form-control-3-4" id="last-name" name="last-name" />
 </div>
-</fieldset>
 
+</div>
 
 	<div class="form-group">
 		<a class="button" href="visa-changed.html" id="continuebutton">Continue</a>
 	</div>
-</form>
+
 <!-- STOP DELETING! -->
 
 	</main>
